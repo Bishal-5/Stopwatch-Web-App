@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="title_logo.webp">
+</head>
+
+<body>
+    <!-- Stopwatch Main Body -->
+    <div class="stopwatch">
+        <h1 style="color: darkblue;">Stopwatch App</h1>
+
+        <!-- Stopwatch Display Screen -->
+        <div class="display" id="stopwatch_meter">
+            <span id="display-hours">00</span>:<span id="display-minutes">00</span>:<span
+                id="display-seconds">00</span>:<span id="display-milliseconds">00</span>
+        </div>
+
+        <!-- Working Buttons -->
+        <div class="controls">
+            <!-- Tooltip to show the button name -->
+            <!-- Start Button --> 
+            <div class="tooltip">
+                <button id="start-btn" onclick="startStopwatch()" class="tooltip" style="font-size: 19px;"><i
+                        class="fa-solid fa-play"></i></button>
+                <span class="tooltiptext">Start</span>
+            </div>
+            <!-- Stop Button -->
+            <div class="tooltip">
+                <button id="pause-btn" onclick="pauseStopwatch()" disabled style="font-size: 19px"><i
+                        class="fa-solid fa-pause"></i></button>
+                <span class="tooltiptext">Stop</span>
+            </div>
+            <!-- Lap Button -->
+            <div class="tooltip">
+                <button id="lap-btn" onclick="recordLap()" disabled style="font-size: 19px"><i
+                        class="fa-solid fa-bookmark"></i></button>
+                <span class="tooltiptext">Lap</span>
+            </div>
+            <!-- Reset Button -->
+            <div class="tooltip">
+                <button id="reset-btn" onclick="resetStopwatch()" disabled style="font-size: 19px"><i
+                        class="fa-solid fa-repeat"></i></button>
+                <span class="tooltiptext">Reset</span>
+            </div>
+        </div>
+
+        <!-- Lap Record List -->
+        <ol type="I" id="lap_list" style="font-size: 19px;color: red;"></ol>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

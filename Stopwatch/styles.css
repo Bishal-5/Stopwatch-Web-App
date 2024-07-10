@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.stopwatch {
+    text-align: center;
+    background-color: #fff;
+    padding: 47px;
+    border-radius: 19px;
+    box-shadow: 22px 35px 15px rgba(0, 0, 0, 0.1);
+}
+
+#stopwatch_meter {
+    font-size: 36px;
+    line-height: 1.3;
+    letter-spacing: 0.178em;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.display {
+    margin-bottom: 10px;
+    border: 2px solid black;
+    border-width: thin;
+    border-radius: 15px;
+    padding: 7px;
+    border-color: coral;
+}
+
+.controls {
+    margin-bottom: 10px;
+}
+
+.controls button {
+    font-size: 1em;
+    padding: 9px 18px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.controls button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#laps {
+    list-style-type: none;
+    padding: 0;
+}
+
+#laps li {
+    margin-bottom: 5px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 84px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 115%;
+    left: 49%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: 0.2s ease;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
